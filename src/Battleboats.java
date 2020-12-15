@@ -219,7 +219,7 @@ public class Battleboats {
                 break;
             }
             else if (command.equalsIgnoreCase("print")) {
-                System.out.println(printBoard("player"));
+                System.out.println(printBoard("computer"));
                 System.out.print("Invalid input! What would you like to do? Shoot/Drone/Missile/Print/End: ");
             }
             else {
@@ -231,7 +231,7 @@ public class Battleboats {
     public void shoot(int[] coordinates) {
         int col = coordinates[0];
         int row = coordinates[1];
-        if (row < 0 || col < 0 || row > playerBoard.length || col > playerBoard.length) {
+        if (row < 0 || col < 0 || row >= playerBoard.length || col >= playerBoard.length) {
             System.out.println("Penalty!");
         }
         else if (computerBoard[row][col].equals("5") ||
@@ -337,26 +337,6 @@ public class Battleboats {
         return false;
     }
 }
-
-class Cell {
-    private int row;
-    private int col;
-    private char status;
-
-    public Cell(int row, int col, char status) {
-        this.row = row;
-        this.col = col;
-        this.status = status;
-    }
-
-    public void setStatus(char status) {
-        this.status = status;
-    }
-
-    public char getStatus() {
-        return status;
-    }
-} // class not used but Project pdf said for it to be in code.
 
 class Main {
     public static void main(String[] args) {
