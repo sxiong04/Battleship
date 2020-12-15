@@ -1,3 +1,5 @@
+Battleboat game created for CSCI 1933
+
 Samantha Xiong (xion1884)
 How to Compile: Type "javac Battleboats.java" into terminal
 How to Run:
